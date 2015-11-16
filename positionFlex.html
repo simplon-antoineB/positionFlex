@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>position flex order</title>
+  </head>
+  <body>
+    <style>
+    body{
+      margin: 0;
+      padding: 0;
+      float: none;
+    }
+    li{
+      height: 34px;
+      width: 200px;
+      margin-top: 10px;
+      border: 2px solid #000;
+      border-radius: 2px;
+      list-style-type: none;
+      text-align: center;
+      padding-top: 16px;
+    }
+    ul{
+      display: flex;
+      flex-direction: column;
+    }
+    #rouge{
+      background: red;
+    }
+    #bleu{
+      background: blue;
+    }
+    #jaune{
+      background: yellow;
+    }
+    #vert{
+      background: green;
+    }
+    #bouton{
+      margin-top: 15px;
+      margin-left: 205px;
+    }
+    </style>
+
+    <form id="formulaire">
+      <ul class="liste">
+        <li id="rouge">rouge</li>
+        <li id="bleu">bleu</li>
+        <li id="jaune">jaune</li>
+        <li id="vert">vert</li>
+      </ul>
+    </form>
+
+    <button type="button" id="bouton" onclick="testFlex()">test</button>
+
+    <script>
+      function testFlex(){
+        var red = document.getElementById("rouge")
+        red.style.order = 1;
+      }
+    </script>
+  </body>
+</html>
